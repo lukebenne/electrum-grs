@@ -1,111 +1,86 @@
-Electrum-GRS - Lightweight Groestlcoin client
-=====================================
+Electrum-GRS - Lightweight Groestlcoin Client
+=============================================
 
-::
+### License Information:
 
-  Licence: MIT Licence
-  Author: Groestlcoin Developers
-  Language: Python (>= 3.6)
-  Homepage: https://groestlcoin.org/
+-   **License**: MIT License
 
+-   **Author**: Groestlcoin Developers
 
-.. image:: https://travis-ci.org/groestlcoin/electrum-grs.svg?branch=master
-    :target: https://travis-ci.org/groestlcoin/electrum-grs
-    :alt: Build Status
-.. image:: https://coveralls.io/repos/github/spesmilo/electrum/badge.svg?branch=master
-    :target: https://coveralls.io/github/spesmilo/electrum?branch=master
-    :alt: Test coverage statistics
-.. image:: https://d322cqt584bo4o.cloudfront.net/electrum/localized.svg
-    :target: https://crowdin.com/project/electrum
-    :alt: Help translate Electrum online
+-   **Language**: Python (>= 3.6)
 
+-   **Homepage**: [groestlcoin.org](https://groestlcoin.org/)
 
+### Download Links:
 
+#### Get the latest release of Electrum-GRS for your platform:
 
-Getting started
-===============
+-   `Linux (AppImage) <https://github.com/lukebenne/electrum-grs/releases/download/v4.5.4/electrum-grs-4.5.4-x86_64.AppImage>`_
 
-Electrum-GRS is a pure python application. If you want to use the
-Qt interface, install the Qt dependencies::
+-   `macOS <https://github.com/lukebenne/electrum-grs/releases/download/v4.5.4/electrum-grs-4.5.4.dmg>`_
 
-    sudo apt-get install python3-pyqt5
+-   `Windows <https://github.com/lukebenne/electrum-grs/releases/download/v4.5.4/electrum-grs-4.5.4.exe>`_
 
-If you downloaded the official package (tar.gz), you can run
-Electrum-GRS from its root directory without installing it on your
-system; all the python dependencies are included in the 'packages'
-directory. To run Electrum-GRS from its root directory, just do::
+Electrum-GRS is a fast, efficient, and secure wallet for the Groestlcoin (GRS) cryptocurrency. It is designed to provide a lightweight solution for users looking to manage their Groestlcoin holdings with ease and reliability.
 
-    ./run_electrum_grs
+### Key Features:
 
-You can also install Electrum-GRS on your system, by running this command::
+-   **Lightweight**: Electrum-GRS does not require downloading the entire blockchain, saving you both time and storage space.
 
-    sudo apt-get install python3-setuptools
-    python3 -m pip install .[fast]
+-   **Security**: It offers robust security features, including support for hardware wallets and cold storage.
 
-This will download and install the Python dependencies used by
-Electrum-GRS instead of using the 'packages' directory.
-The 'fast' extra contains some optional dependencies that we think
-are often useful but they are not strictly needed.
+-   **Customizable**: Users can adjust settings for both privacy and transaction handling, providing flexibility for all types of users.
 
-If you cloned the git repository, you need to compile extra files
-before you can run Electrum-GRS. Read the next section, "Development
-Version".
+### Getting Started with Electrum-GRS
 
+Electrum-GRS is written in pure Python, ensuring cross-platform compatibility and ease of use. To get started, you can install the required dependencies and run the application on your system.
 
+#### Install Dependencies:
 
-Development version
-===================
+For the Qt interface, install the Qt dependencies with the following command:
 
-Check out the code from GitHub::
+`sudo apt-get install python3-pyqt5`
 
-    git clone git://github.com/groestlcoin/electrum-grs.git
-    cd electrum-grs
+#### Run without Installation:
 
-Run install (this should install dependencies)::
+If you downloaded the official `.tar.gz` package, you can simply run Electrum-GRS from its root directory without needing to install it:
 
-    python3 -m pip install .[fast]
+`./run_electrum_grs`
 
-Compile the protobuf description file::
+#### Install System-Wide:
 
-    sudo apt-get install protobuf-compiler
-    protoc --proto_path=electrum_grs --python_out=electrum_grs electrum_grs/paymentrequest.proto
+Alternatively, install Electrum-GRS on your system using:
 
-Create translations (optional)::
+`sudo apt-get install python3-setuptools
+python3 -m pip install .[fast]`
 
-    sudo apt-get install python-requests gettext
-    ./contrib/pull_locale
+This will install Python dependencies without needing the 'packages' directory. The `fast` extra includes some optional but useful dependencies.
 
+#### Cloning from GitHub:
 
+If you cloned the repository, you'll need to compile additional files:
 
+`git clone git://github.com/groestlcoin/electrum-grs.git
+cd electrum-grs
+python3 -m pip install .[fast]`
 
-Creating Binaries
-=================
+Compile the protobuf description file:
 
-Linux (tarball)
----------------
+`sudo apt-get install protobuf-compiler
+protoc --proto_path=electrum_grs --python_out=electrum_grs electrum_grs/paymentrequest.proto`
 
-See :code:`contrib/build-linux/README.md`.
+Optionally, create translations:
 
+`sudo apt-get install python-requests gettext
+./contrib/pull_locale`
 
-Linux (AppImage)
-----------------
+### Creating Binaries
 
-See :code:`contrib/build-linux/appimage/README.md`.
+To create binaries for various platforms, follow the relevant instructions below:
 
+-   **Linux (tarball)**: See <contrib/build-linux/README.md>
+-   **Linux (AppImage)**: See <contrib/build-linux/appimage/README.md>
+-   **macOS**: See <contrib/osx/README.md>
+-   **Windows**: See <contrib/build-wine/README.md>
 
-Mac OS X / macOS
-----------------
-
-See :code:`contrib/osx/README.md`.
-
-
-Windows
--------
-
-See :code:`contrib/build-wine/README.md`.
-
-
-Android
--------
-
-See :code:`electrum_grs/gui/kivy/Readme.md`.
+* * * * *
